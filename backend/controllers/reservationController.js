@@ -1,19 +1,54 @@
 const asyncHandler = require('express-async-handler')
+const Reservation = require('../models/reservationModel')
 
 const getReservations = asyncHandler( async (req, res) => {
-    res.status(200).json({ message: 'Get reservations' })
+    const reservations = await Reservation.find()
+    res.status(200).json({reservations})
 })
 
 const createReservations = asyncHandler( async (req, res) => {
-    res.status(200).json({ message: 'Create reservation' })
+
+    if (!req.body.name) {
+        res.status(400)
+        throw new Error('Please add a name for reservation')
+    }
+    if (!req.body.date) {
+        res.status(400)
+        throw new Error('Please add a date for reservation')
+    }
+    const reservation = await Reservation.create({
+        name: req.body.name,
+        date: req.body.date
+    })
+
+    res.status(200).json(reservation) 
 })
 
 const editReservations = asyncHandler( async (req, res) => {
-    res.status(200).json({ message: `Edit reservation ${req.params.id}` })
+    const reservation = await Reservation.findById(req.params.id)
+
+    if(!reservation) {
+        res.status(400)
+        throw new Error('Reservation not found')
+    }
+
+    const updatedReservation = await Reservation.findByIdAndUpdate(req.params.id, req.body, {new: true})
+
+    res.status(200).json(updatedReservation)
 })
 
 const deleteReservations = asyncHandler( async (req, res) => {
-    res.status(200).json({ message: `Delete reservation ${req.params.id}` })
+
+    const reservation = await Reservation.findById(req.params.id)
+
+    if(!reservation) {
+        res.status(400)
+        throw new Error('Reservation not found')
+    }
+
+    await reservation.remove()
+
+    res.status(200).json({ id: req.params.id })
 })
 
 module.exports = {
