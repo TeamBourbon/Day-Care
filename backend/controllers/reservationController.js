@@ -42,18 +42,17 @@ const editReservations = asyncHandler( async (req, res) => {
         throw new Error('User not found')
     }
     //Make sure users match
-    if(Reservation.user.toString() != user.id) {
+    if(reservation.user.toString() !== user.id) {
         res.status(401)
         throw new Error('User not authorized')
     }
 
-    const updatedReservation = await Reservation.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    const updatedReservation = await Reservation.findByIdAndUpdate(req.params.id, req.body, {new: true,})
 
     res.status(200).json(updatedReservation)
 })
 
 const deleteReservations = asyncHandler( async (req, res) => {
-
     const reservation = await Reservation.findById(req.params.id)
 
     if(!reservation) {
@@ -68,7 +67,7 @@ const deleteReservations = asyncHandler( async (req, res) => {
         throw new Error('User not found')
     }
     //Make sure users match
-    if(Reservation.user.toString() != user.id) {
+    if(reservation.user.toString() !== user.id) {
         res.status(401)
         throw new Error('User not authorized')
     }
