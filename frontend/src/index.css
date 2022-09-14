@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+p.catch_phrase {
+  margin: auto;
+  text-align: center;
+}
+
+img.carousel_image{
+  /* background-color: goldenrod; */
+  margin-bottom: 35px;
+  border-radius: 20px;
+  padding: 10px;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  /* border: 10px solid darkgoldenrod; */
+}
+img.maps_locator {
+    margin: auto;
+    width: 50%;
+  
+}

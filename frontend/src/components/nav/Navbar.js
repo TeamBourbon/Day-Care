@@ -10,14 +10,19 @@ export const Navigation = () => {
   return (
     <div className={"navBar"}>
       <Navbar sticky="top" bg="flat"  expand="sm" collapseOnSelect={"true"}>
-        <Container>
-        
-        {/* <Navbar.Toggle /> */}
+        <Navbar.Brand>
+        <img 
+        alt="brand_image"
+        src={`https://capgemini-my.sharepoint.com/:i:/r/personal/abhi_a_singh_capgemini_com/Documents/Microsoft%20Teams%20Chat%20Files/Background%20(1).png?csf=1&web=1&e=h9O8et"`} width="50px" height="45px" />
+          green thumb care services
+        </Navbar.Brand>
+        <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav>
 
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/services">Services</Nav.Link>
+            <Nav.Link href="/servicefinder">Services</Nav.Link>
+            <Nav.Link href="/reservations">Reservations</Nav.Link>
             <Nav.Link to="/logout">logout</Nav.Link>
             {/* <Nav.Link href={`/library/${userId}`}>Library</Nav.Link>
             <Nav.Link to="/login">Login</Nav.Link>
@@ -39,7 +44,7 @@ export const Navigation = () => {
             } */}
           </Nav>
         </Navbar.Collapse>
-        </Container>
+        
       </Navbar>
     </div>
     // <>
