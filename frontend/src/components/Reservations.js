@@ -1,78 +1,88 @@
 import React from "react";
-import { Container, Table } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const Reservations = () => {
     const reservations = [
         {
-            name: "ex",
+            name: "ex1",
             location_id: "1",
             type_id: "2",
             liveFeed: "popuplink",
-            active: true
+            active: true,
+            date: "6/6/22"
         },
         {
-            name: "ex",
+            name: "ex1",
             location_id: "2",
             type_id: "2",
             liveFeed: "popuplink",
-            active: true
+            active: true,
+            date: "6/6/22"
         },
         {
-            name: "ex",
+            name: "ex1",
             location_id: "3",
             type_id: "1",
             liveFeed: "popuplink",
-            active: true
+            active: true,
+            date: "6/6/22"
         },
         {
-            name: "ex",
+            name: "ex1",
             location_id: "4",
             type_id: "1",
             liveFeed: "popuplink",
-            active: true
+            active: true,
+            date: "6/6/22"
         },
         {
-            name: "ex",
+            name: "ex1",
             location_id: "6",
             type_id: "2",
             liveFeed: "popuplink",
-            active: true
+            active: true,
+            date: "6/6/22"
         },
         {
-            name: "ex",
+            name: "ex1",
             location_id: "1",
             type_id: "2",
             liveFeed: "popuplink",
-            active: true
+            active: true,
+            date: "6/6/22"
         },
         {
-            name: "ex",
+            name: "ex2",
             location_id: "2",
             type_id: "2",
             liveFeed: "popuplink",
-            active: false
+            active: false,
+            date: "6/7/22"
         },
         {
-            name: "ex",
+            name: "ex2",
             location_id: "3",
             type_id: "1",
             liveFeed: "popuplink",
-            active: false
+            active: false,
+            date: "6/15/22"
         },
         {
-            name: "ex",
+            name: "ex2",
             location_id: "4",
             type_id: "1",
             liveFeed: "popuplink",
-            active: false
+            active: false,
+            date: "6/77/22"
         },
         {
-            name: "ex",
+            name: "ex2",
             location_id: "6",
             type_id: "2",
             liveFeed: "popuplink",
-            active: false
+            active: false,
+            date: "6/87/22"
         }
 
     ]
@@ -80,7 +90,15 @@ export const Reservations = () => {
     return (
         <>
             <Container>
+                <Button variant="dark">
+                    Schedule a Drop-Off
+                </Button>
+            </Container>
+            <Container>
                 <Table striped bordered hover>
+                    <h2>
+                        Today's Reservations
+                    </h2>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -91,13 +109,12 @@ export const Reservations = () => {
                     </thead>
                     <tbody>
                         {
-                            
-                            reservations && reservations.active === false
+
+                            reservations
                                 ?
-                                 reservations.map(
-                                    
+                                reservations.filter(res =>
+                                    res.active === true).map(
                                         res => {
-                                            
                                             return <tr>
                                                 <td>{res.name}</td>
                                                 <td>{res.name}</td>
@@ -107,11 +124,10 @@ export const Reservations = () => {
                                                         Check in
                                                     </Link>
                                                 </td>
-
                                             </tr>
                                         }
                                     )
-                                
+
 
 
                                 : "you have no active reservations"
@@ -122,42 +138,45 @@ export const Reservations = () => {
             </Container>
             <Container>
                 <Table striped bordered hover>
+                    <h2>
+                        Future Reservations
+                    </h2>
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Location</th>
                             <th>Type</th>
-                            <th>Feed</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        {
 
-                    {
-                        reservations && reservations.active === false
-                            ? <tbody>
-                                {reservations.map(
-                                    res => {
-                                        return <tr>
-                                            <td>{res.name}</td>
-                                            <td>{res.name}</td>
-                                            <td>{res.name}</td>
-                                            <td>
-                                                <Link to="nowhere">
-                                                    Check in
-                                                </Link>
-                                            </td>
+                            reservations
+                                ?
+                                reservations.filter(res =>
+                                    res.active === false).map(
+                                        res => {
+                                            return <tr>
+                                                <td>{res.name}</td>
+                                                <td>{res.name}</td>
+                                                <td>{res.name}</td>
+                                                <td>
+                                                    {res.date}
+                                                </td>
+                                            </tr>
+                                        }
+                                    )
 
-                                        </tr>
-                                    }
-                                )
-                                }
 
-                            </tbody>
 
-                            : "you have no future reservations"
-                    }
+                                : "you have no active reservations"
+                        }
+                    </tbody>
                 </Table>
 
             </Container>
+
         </>
     )
 }

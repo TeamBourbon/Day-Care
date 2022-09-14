@@ -11,7 +11,9 @@ export const Navigation = () => {
     <div className={"navBar"}>
       <Navbar sticky="top" bg="flat"  expand="sm" collapseOnSelect={"true"}>
         <Container>
-        
+        <Navbar.Brand>
+          green thumb care services
+        </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav>

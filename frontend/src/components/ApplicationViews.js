@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { Home } from "./Home";
 import { Services } from "./Services";
-import { Locations } from "./locations/Locations";
+import { Locations } from "./locations/LocationView";
 import { ServiceFinder } from "./ServiceFinder";
 import { Reservations } from "./Reservations";
 
