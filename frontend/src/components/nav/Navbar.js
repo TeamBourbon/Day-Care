@@ -12,12 +12,13 @@ export const Navigation = () => {
       <Navbar sticky="top" bg="flat"  expand="sm" collapseOnSelect={"true"}>
         <Container>
         
-        {/* <Navbar.Toggle /> */}
+        <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav>
 
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/services">Services</Nav.Link>
+            <Nav.Link href="/servicefinder">Services</Nav.Link>
+            <Nav.Link href="/reservations">Reservations</Nav.Link>
             <Nav.Link to="/logout">logout</Nav.Link>
             {/* <Nav.Link href={`/library/${userId}`}>Library</Nav.Link>
             <Nav.Link to="/login">Login</Nav.Link>

@@ -19,12 +19,14 @@
   "homepage": "https://github.com/TeamBourbon/Day-Care#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.2.1",
     "colors": "^1.4.0",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.6.0"
+    "mongoose": "^6.6.0",
+    "react-bootstrap": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
