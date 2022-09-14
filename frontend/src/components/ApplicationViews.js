@@ -5,6 +5,8 @@ import { Services } from "./Services";
 import { Locations } from "./locations/LocationView";
 import { ServiceFinder } from "./ServiceFinder";
 import { Reservations } from "./Reservations";
+import { VirtualTour } from "./VirtualTour";
+import { LiveFeed } from "./LiveFeed";
 
 
 export const ApplicationViews = () => {
@@ -25,6 +27,12 @@ export const ApplicationViews = () => {
             </Route>
             <Route exact path="/reservations">
                 <Reservations />
+            </Route>
+            <Route exact path="/virtualTour">
+               <VirtualTour /> 
+            </Route>
+            <Route exact path="/liveFeed">
+               <LiveFeed />
             </Route>
         </>
     )

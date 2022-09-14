@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Accordion, Container, Figure, Row, Tab, Tabs } from "react-bootstrap";
+import { Accordion, Button, Container, Figure, Row, Tab, Tabs } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Reviews } from "./Reviews";
 // import { Link, useParams } from "react-router-dom/cjs/react-router-dom.min";
@@ -75,9 +75,9 @@ export const Locations = () => {
                                 </Accordion>
                             </Tab>
                             <Tab eventKey="Tour" title="Tour">
-                                <Link>
+                                <Button href={`/virtualTour`}>
                                     sick vr tour
-                                </Link>
+                                </Button>
                             </Tab>
                             <Tab eventKey="Reviews" title="Reviews" >
                                 <Reviews />

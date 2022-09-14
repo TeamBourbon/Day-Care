@@ -36,7 +36,8 @@ export const Reviews = () => {
             review: "this is a review about this location",
             rating: 4,
             location_id: 1,
-            user: "user"
+            user_id: 1,
+            date: "date"
         }
     ]
     const ratings = reviews.map(review => review?.rating)
@@ -80,9 +81,7 @@ export const Reviews = () => {
                 variant="dark">
                     Submit
                 </Button>
-                <Row>
-
-                </Row>
+                
             </Container>
 
         </>

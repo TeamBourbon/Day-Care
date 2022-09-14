@@ -10,8 +10,10 @@ export const Navigation = () => {
   return (
     <div className={"navBar"}>
       <Navbar sticky="top" bg="flat"  expand="sm" collapseOnSelect={"true"}>
-        <Container>
         <Navbar.Brand>
+        <img 
+        alt="brand_image"
+        src={`https://capgemini-my.sharepoint.com/:i:/r/personal/abhi_a_singh_capgemini_com/Documents/Microsoft%20Teams%20Chat%20Files/Background%20(1).png?csf=1&web=1&e=h9O8et"`} width="50px" height="45px" />
           green thumb care services
         </Navbar.Brand>
         <Navbar.Toggle />
@@ -42,7 +44,7 @@ export const Navigation = () => {
             } */}
           </Nav>
         </Navbar.Collapse>
-        </Container>
+        
       </Navbar>
     </div>
     // <>

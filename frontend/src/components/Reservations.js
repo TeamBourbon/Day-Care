@@ -95,10 +95,10 @@ export const Reservations = () => {
                 </Button>
             </Container>
             <Container>
+                <h2>
+                    Today's Reservations
+                </h2>
                 <Table striped bordered hover>
-                    <h2>
-                        Today's Reservations
-                    </h2>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -110,7 +110,7 @@ export const Reservations = () => {
                     <tbody>
                         {
 
-                            reservations
+                            reservations !== 0
                                 ?
                                 reservations.filter(res =>
                                     res.active === true).map(
@@ -120,16 +120,13 @@ export const Reservations = () => {
                                                 <td>{res.name}</td>
                                                 <td>{res.name}</td>
                                                 <td>
-                                                    <Link to="nowhere">
+                                                    <Button  variant="dark" href="/liveFeed">
                                                         Check in
-                                                    </Link>
+                                                    </Button>
                                                 </td>
                                             </tr>
                                         }
                                     )
-
-
-
                                 : "you have no active reservations"
                         }
                     </tbody>
@@ -137,10 +134,10 @@ export const Reservations = () => {
 
             </Container>
             <Container>
+                <h2>
+                    Future Reservations
+                </h2>
                 <Table striped bordered hover>
-                    <h2>
-                        Future Reservations
-                    </h2>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -152,7 +149,7 @@ export const Reservations = () => {
                     <tbody>
                         {
 
-                            reservations
+                            reservations !== 0
                                 ?
                                 reservations.filter(res =>
                                     res.active === false).map(
@@ -167,9 +164,6 @@ export const Reservations = () => {
                                             </tr>
                                         }
                                     )
-
-
-
                                 : "you have no active reservations"
                         }
                     </tbody>
