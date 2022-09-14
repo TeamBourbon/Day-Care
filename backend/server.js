@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/reservations', require('./routes/reservationRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
+app.use('/api/locations', require('./routes/locationRoutes'))
 
 app.use(errorHandler)
 

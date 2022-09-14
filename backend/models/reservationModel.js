@@ -10,6 +10,11 @@ const reservationSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please add a name']
     },
+    location: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Location'
+    },
     date: {
         type: Date,
         required: [true, 'Please add a date']

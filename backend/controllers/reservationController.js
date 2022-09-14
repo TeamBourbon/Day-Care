@@ -10,18 +10,23 @@ const getReservations = asyncHandler( async (req, res) => {
 
 const createReservations = asyncHandler( async (req, res) => {
 
-    if (!req.body.name) {
+    if(!req.body.name) {
         res.status(400)
         throw new Error('Please add a name for reservation')
     }
-    if (!req.body.date) {
+    if(!req.body.date) {
         res.status(400)
         throw new Error('Please add a date for reservation')
+    }
+    if(!req.location) {
+        res.status(400)
+        throw new Error('Please select a location')
     }
     const reservation = await Reservation.create({
         name: req.body.name,
         date: req.body.date,
         user: req.user.id,
+        location: req.location.id,
     })
 
     res.status(200).json(reservation) 
