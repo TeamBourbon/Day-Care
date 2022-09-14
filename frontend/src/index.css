@@ -11,23 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 p.catch_phrase {
-  margin: auto;
-  text-align: center;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-top: 10%;
+  /* font-family: ; */
+
 }
 
-img.carousel_image{
+img.carousel_image.img-fluid {
   /* background-color: goldenrod; */
   margin-bottom: 35px;
+  margin-left: 100px;
   border-radius: 20px;
   padding: 10px;
+  height: 50%;
   width: 75%;
   margin: auto;
   text-align: center;
-  /* border: 10px solid darkgoldenrod; */
+  border: 10px solid #606C38;
 }
+div.active.carousel-item {
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+}
+
 img.maps_locator {
-    margin: auto;
-    width: 50%;
-  
+  margin: auto;
+  width: 50%;
+}
+
+a.btn.btn-dark{
+  margin-top: 10% !important;
+}
+
+* {
+  background-color: #fefae0
+}
+
+div.carousel-indicators {
+  background-color: transparent !important;
+}
+span.carousel-control-prev-icon {
+  background-color: transparent !important; 
+}
+
+nav.navbar.navbar-expand-sm.navbar-light.bg-flat.sticky-top {
+  font-size: larger;
+  border-bottom: solid .5px black;
+  margin-bottom: 10px;
 }
