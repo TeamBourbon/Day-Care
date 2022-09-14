@@ -11,7 +11,6 @@ function App() {
     <Route>
       <Navigation />
       <ApplicationViews />
-
     </Route>
    
    
