@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler')
 const Reservation = require('../models/reservationModel')
 const User = require('../models/userModel')
+const mongoose = require('mongoose')
 
 const getReservations = asyncHandler( async (req, res) => {
     const reservations = await Reservation.find({ user: req.user.id })
@@ -10,6 +11,7 @@ const getReservations = asyncHandler( async (req, res) => {
 
 const createReservations = asyncHandler( async (req, res) => {
 
+    const location = mongoose.Types.ObjectId(req.body.location)
     if(!req.body.name) {
         res.status(400)
         throw new Error('Please add a name for reservation')
@@ -18,7 +20,7 @@ const createReservations = asyncHandler( async (req, res) => {
         res.status(400)
         throw new Error('Please add a date for reservation')
     }
-    if(!req.location) {
+    if(!location) {
         res.status(400)
         throw new Error('Please select a location')
     }
@@ -26,7 +28,7 @@ const createReservations = asyncHandler( async (req, res) => {
         name: req.body.name,
         date: req.body.date,
         user: req.user.id,
-        location: req.location.id,
+        location
     })
 
     res.status(200).json(reservation) 

@@ -12,7 +12,7 @@ const addStaff = asyncHandler( async (req, res) => {
         throw new Error('Please add all required fields')
     }
 
-    const locationExists = await Location.findById(mongoose.Types.ObjectId(location))
+    const locationExists = await Location.findById(location)
 
     if(!locationExists) {
         res.status(400)
@@ -28,17 +28,10 @@ const addStaff = asyncHandler( async (req, res) => {
     })
 
     if(staff) {
-        res.status(201).json({
-            _id: staff.id,
-            name: staff.id,
-            title: staff.title,
-            bio: staff.bio,
-            pic: staff.pic, 
-            location: staff.location
-        }) 
+        res.status(201).json(staff) 
     } else {
         res.status(400)
-        throw new Error('Invalid user data')
+        throw new Error('Invalid staff data')
     }    
 })
 
