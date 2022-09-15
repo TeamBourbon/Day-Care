@@ -40,7 +40,9 @@ export const Locations = () => {
         <>{
             <Container margin="20px" className="shroom_profile">
                 <section className="shroom_profile">
+                    <br></br>
                     <h1>{location.branchName}</h1>
+                    <br></br>
                     <div className="shroom_header">
                         <Figure>
                             <Figure.Image 
@@ -55,6 +57,7 @@ export const Locations = () => {
                             className="shroom_details">
 
                             <Tab eventKey="about" title="About">
+                                <br></br>
                                 <p>
                                     About: Placerat vestibulum lectus mauris ultrices eros. Lectus urna duis convallis convallis tellus id interdum. Ultricies mi eget mauris pharetra et ultrices neque ornare. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. A scelerisque purus semper eget duis at tellus. Dui ut ornare lectus sit amet est placerat in. Amet justo donec enim diam. Euismod elementum nisi quis eleifend. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Maecenas sed enim ut sem viverra aliquet eget. Massa eget egestas purus viverra accumsan in nisl nisi.
                                 </p>
@@ -91,8 +94,8 @@ export const Locations = () => {
                                 </Accordion>
                             </Tab>
                             <Tab eventKey="Tour" title="Tour">
-                                <Button href={`/virtualTour`}>
-                                    sick vr tour
+                                <Button href={`/virtualTour`} variant="dark" size="lg">
+                                    Visit VR Tour
                                 </Button>
                             </Tab>
                             <Tab eventKey="Reviews" title="Reviews" >

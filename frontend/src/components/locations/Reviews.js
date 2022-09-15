@@ -52,6 +52,7 @@ export const Reviews = () => {
                 <Row>
                     <Col
                         classname="review_rating">
+                            <br></br>
                         <h3>
                             Customer Satisfaction: {ratingAvg}/5
                         </h3>

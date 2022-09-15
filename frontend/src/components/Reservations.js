@@ -66,11 +66,13 @@ export const Reservations = () => {
     return (
         <>
             <Container>
+                <br></br>
                 <Button variant="dark">
                     Schedule a Drop-Off
                 </Button>
             </Container>
             <Container>
+                <br></br>
                 <h2>
                     Today's Reservations
                 </h2>
@@ -110,6 +112,7 @@ export const Reservations = () => {
 
             </Container>
             <Container>
+                <br></br>
                 <h2>
                     Future Reservations
                 </h2>

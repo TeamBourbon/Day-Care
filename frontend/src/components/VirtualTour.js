@@ -8,6 +8,9 @@ export const VirtualTour = () => {
         height="450" loading="lazy" 
         allow="autoplay"
         referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <br></br>
+        <br></br>
+        <a href="/location">Go Back</a>
         </>
     )
 }

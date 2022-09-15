@@ -17,7 +17,7 @@ export const ServiceFinder = () => {
                 <div class="row">
 
                     <div class="col-lg-12">
-
+                        <br></br>
                         <p><h1>Join us from anywhere on the globe</h1></p>
 
 
