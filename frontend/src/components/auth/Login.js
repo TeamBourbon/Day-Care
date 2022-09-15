@@ -28,14 +28,24 @@ export const Login = () => {
 
   return (
     <>
-    <Container >
+    <Container>
+        <h1>Login</h1>
+        <br></br>
         <Form onSubmit={loginUser}>
             <Form.Label>Email</Form.Label>
             <Form.Control type='email' onChange={(e) => setEmail(e.target.value)}></Form.Control>
+            <br></br>
             <Form.Label>Password</Form.Label>
             <Form.Control type='password' onChange={(e) => setPassword(e.target.value)}></Form.Control>
-            <Button type='submit'>Log In</Button>
+            <br></br>
+            <Button type='submit'  variant="dark" size="lg">Log In</Button>
+            <br></br>
+            <br></br>
+            <a href='/register'>Go back</a>
+        
+            
         </Form>
+        
         </Container>
     </>
   )

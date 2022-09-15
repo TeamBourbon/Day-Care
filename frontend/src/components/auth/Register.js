@@ -34,7 +34,7 @@ export const Register = () => {
   return (
     <>
     <Container >
-        <h2>Welcome</h2>
+        <h1>Welcome</h1>
         <Form onSubmit={registerUser}>
             <Form.Label>Name</Form.Label>
             <Form.Control type='text' onChange={(e) => setName(e.target.value)}></Form.Control>
