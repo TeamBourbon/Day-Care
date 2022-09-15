@@ -5,84 +5,60 @@ import { Link } from "react-router-dom";
 export const Reservations = () => {
     const reservations = [
         {
-            name: "ex1",
+            name: "Lyle",
             location_id: "1",
-            type_id: "2",
+            type_id: "child",
             liveFeed: "popuplink",
             active: true,
             date: "6/6/22"
         },
         {
-            name: "ex1",
+            name: "Sparky",
             location_id: "2",
-            type_id: "2",
+            type_id: "pet",
             liveFeed: "popuplink",
             active: true,
             date: "6/6/22"
         },
         {
-            name: "ex1",
+            name: "Bernadine",
             location_id: "3",
-            type_id: "1",
+            type_id: "child",
             liveFeed: "popuplink",
             active: true,
             date: "6/6/22"
         },
         {
-            name: "ex1",
-            location_id: "4",
-            type_id: "1",
-            liveFeed: "popuplink",
-            active: true,
-            date: "6/6/22"
-        },
-        {
-            name: "ex1",
-            location_id: "6",
-            type_id: "2",
-            liveFeed: "popuplink",
-            active: true,
-            date: "6/6/22"
-        },
-        {
-            name: "ex1",
-            location_id: "1",
-            type_id: "2",
-            liveFeed: "popuplink",
-            active: true,
-            date: "6/6/22"
-        },
-        {
-            name: "ex2",
+            name: "Lyle",
             location_id: "2",
-            type_id: "2",
+            type_id: "child",
             liveFeed: "popuplink",
             active: false,
             date: "6/7/22"
         },
         {
-            name: "ex2",
+            name: "Bernadine",
             location_id: "3",
-            type_id: "1",
+            type_id: "child",
             liveFeed: "popuplink",
             active: false,
             date: "6/15/22"
         },
         {
-            name: "ex2",
+            name: "Sparky",
             location_id: "4",
-            type_id: "1",
+            type_id: "pet",
             liveFeed: "popuplink",
             active: false,
-            date: "6/77/22"
+            date: "6/17/22"
         },
         {
-            name: "ex2",
+            name: "Sparky",
             location_id: "6",
-            type_id: "2",
+            type_id: "pet",
             liveFeed: "popuplink",
             active: false,
-            date: "6/87/22"
+            date: "6/18/22"
         }
 
     ]
@@ -117,8 +93,8 @@ export const Reservations = () => {
                                         res => {
                                             return <tr>
                                                 <td>{res.name}</td>
-                                                <td>{res.name}</td>
-                                                <td>{res.name}</td>
+                                                <td>{`Larry & Debbie Beck Infant & Toddler Center`}</td>
+                                                <td>{res.type_id}</td>
                                                 <td>
                                                     <Button  variant="dark" href="/liveFeed">
                                                         Check in
@@ -156,8 +132,8 @@ export const Reservations = () => {
                                         res => {
                                             return <tr>
                                                 <td>{res.name}</td>
-                                                <td>{res.name}</td>
-                                                <td>{res.name}</td>
+                                                <td>{`Larry & Debbie Beck Infant & Toddler Center`}</td>
+                                                <td>{res.type_id}</td>
                                                 <td>
                                                     {res.date}
                                                 </td>

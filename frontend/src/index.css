@@ -65,3 +65,21 @@ nav.navbar.navbar-expand-sm.navbar-light.bg-flat.sticky-top {
   border-bottom: solid .5px black;
   margin-bottom: 10px;
 }
+map {
+  align-content: center;
+}
+
+div.form-group {
+  margin-bottom: 5%;
+}
+button.accordion-button.collapsed {
+  background-color: transparent !important;
+}
+
+input.review_input {
+  background-color: white;
+}
+
+div.review {
+  margin-top: 10px;
+}

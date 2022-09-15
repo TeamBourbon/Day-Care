@@ -1,5 +1,7 @@
 import React from "react";
-import { Button, Container, FormLabel, Row } from "react-bootstrap";
+import { Button, Container, FormLabel, Row, Col } from "react-bootstrap";
+import ReactStars from "react-rating-stars-component";
+
 
 export const Reviews = () => {
     const reviews = [
@@ -8,28 +10,28 @@ export const Reviews = () => {
             review: "this is a review about this location",
             rating: 4,
             location_id: 1,
-            user: "user"
+            user: "Gary B."
         },
         {
             id: 2,
             review: "this is a review about this location",
             rating: 3.5,
             location_id: 1,
-            user: "user"
+            user: "Lewis C."
         },
         {
             id: 3,
             review: "this is a review about this location",
             rating: 4.5,
             location_id: 1,
-            user: "user"
+            user: "tina S."
         },
         {
             id: 4,
             review: "this is a review about this location",
-            rating: 3,
+            rating: 5,
             location_id: 1,
-            user: "user"
+            user: "Betty C."
         },
         {
             id: 5,
@@ -48,16 +50,37 @@ export const Reviews = () => {
         <>
             <Container>
                 <Row>
-                    Rating Average: {ratingAvg}/5
+                    <Col
+                        classname="review_rating">
+                        <h3>
+                            Customer Satisfaction: {ratingAvg}/5
+                        </h3>
+
+                        <ReactStars
+                            size={50}
+                            value={ratingAvg}
+                            isHalf={true}
+                            count={5}
+                            edit={false}
+                        />
+
+                    </Col>
                 </Row>
                 <Row>
 
                     {
                         reviews.map(
                             review => {
-                                return <div>
-                                    {review.review}{"    "}{review.rating}<br></br>
+                                return <div
+                                    className="review">
+                                    {review.review}<br></br>
                                     By:{review.user}<br></br>
+                                    <ReactStars
+                                        value={review.rating}
+                                        isHalf={true}
+                                        count={5}
+                                        edit={false}
+                                    />
                                 </div>
                             }
                         )
@@ -66,22 +89,28 @@ export const Reviews = () => {
                 <Row>
                     <FormLabel>Leave a Review</FormLabel>
                     <input
-                    // onChange={(e) => {
-                    //     "event"
-                    // }}
-                    type="text"
-                    placeholder="Maximum 500 characters."
+                        className="review_input"
+                        // onChange={(e) => {
+                        //     "event"
+                        // }}
+                        type="text"
+                        placeholder="Maximum 500 characters."
                     />
 
                 </Row>
                 <Row>
-                    Rating Component
+                    <ReactStars
+                        value={0}
+                        isHalf={true}
+                        count={5}
+                        edit={true}
+                    />
                 </Row>
                 <Button
-                variant="dark">
+                    variant="dark">
                     Submit
                 </Button>
-                
+
             </Container>
 
         </>
