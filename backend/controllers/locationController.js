@@ -27,13 +27,15 @@ const addLocation = asyncHandler( async (req, res) => {
         })
     } else {
         res.status(400)
-        throw new Error('Invalid user data')
+        throw new Error('Invalid location data')
     }
 
 })
 
 const getLocation = asyncHandler( async (req, res) => {
-    const {branchName, state, city, zip} = await Location.findById(req.loca)
+    const locations = await Location.find()
+
+    res.status(200).json(locations)
 })
 
 module.exports = {

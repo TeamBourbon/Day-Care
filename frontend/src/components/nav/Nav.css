@@ -1,0 +1,8 @@
+@import url("../../index.css");
+
+nav.navbar.navbar-expand-sm.navbar-light.bg-flat.sticky-top {
+    font-color: blue;
+    margin-bottom: 30px;
+}
+
+
