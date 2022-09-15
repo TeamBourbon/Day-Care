@@ -23,6 +23,12 @@ export const Login = () => {
 
         const data = await response.json()
 
+        if(data.user) {
+            window.location.href = '/'
+        } else {
+            alert('Please check you username and password')
+        }
+
         console.log(data)
     }
 

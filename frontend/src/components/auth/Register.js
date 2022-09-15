@@ -13,6 +13,11 @@ export const Register = () => {
     async function registerUser(event) {
         event.preventDefault()
 
+        if(password !== password2) {
+            alert('Passwords do not match')
+            return
+        }
+
         const response = await fetch('http://localhost:5000/api/users', {
             method: 'POST',
             headers: {
@@ -27,6 +32,13 @@ export const Register = () => {
         })
 
         const data = await response.json()
+
+        if(data.user) {
+            alert('Sign Up Succesful')
+            window.location.href = '/'
+        } else {
+            alert('Please verify your info is correct')
+        }
 
         console.log(data)
     }
@@ -50,7 +62,7 @@ export const Register = () => {
             <Button type='submit' variant="dark" size="lg">Sign In</Button>
         </Form>
         <br></br>
-        <h4>New user? <a href='/login'>Create an account</a></h4>
+        <h4>Already an user? <a href='/login'>Log In</a></h4>
         </Container>
     </>
   )
