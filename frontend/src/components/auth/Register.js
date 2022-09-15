@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Container, Form, Grid } from "react-bootstrap";
 
 export const Register = () => {
 
@@ -33,7 +33,8 @@ export const Register = () => {
 
   return (
     <>
-    <Container>
+    <Container >
+        <h2>Welcome</h2>
         <Form onSubmit={registerUser}>
             <Form.Label>Name</Form.Label>
             <Form.Control type='text' onChange={(e) => setName(e.target.value)}></Form.Control>
@@ -45,8 +46,11 @@ export const Register = () => {
             <Form.Control type='password' onChange={(e) => setPassword(e.target.value)}></Form.Control>
             <Form.Label>Repeat Password</Form.Label>
             <Form.Control type='password' onChange={(e) => setPassword2(e.target.value)}></Form.Control>
-            <Button type='submit'>Register</Button>
+            <br></br>
+            <Button type='submit' variant="dark" size="lg">Sign In</Button>
         </Form>
+        <br></br>
+        <h4>New user? <a href='/login'>Create an account</a></h4>
         </Container>
     </>
   )

@@ -8,6 +8,7 @@ import { Reservations } from "./Reservations";
 import { VirtualTour } from "./VirtualTour";
 import { LiveFeed } from "./LiveFeed";
 import { Register } from "./auth/Register";
+import { Login } from "./auth/Login";
 
 
 export const ApplicationViews = () => {
@@ -37,6 +38,9 @@ export const ApplicationViews = () => {
             </Route>
             <Route exact path="/register">
                <Register />
+            </Route>
+            <Route exact path="/login">
+               <Login />
             </Route>
         </>
     )
