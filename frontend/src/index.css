@@ -11,23 +11,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 p.catch_phrase {
-  margin: auto;
-  text-align: center;
+  margin-top: 3% !important;
+  margin-left: 10%;
+  margin-top: 10%;
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
 }
 
-img.carousel_image{
+img.carousel_image.img-fluid {
   /* background-color: goldenrod; */
-  margin-bottom: 35px;
+  /* margin-bottom: 35px;
+  margin-left: 100px; */
   border-radius: 20px;
-  padding: 10px;
+  padding: 10px #606C38;
+  height: 50%;
   width: 75%;
-  margin: auto;
+  /* margin: auto; */
   text-align: center;
-  /* border: 10px solid darkgoldenrod; */
+  border: 10px solid #283618;
 }
+div.active.carousel-item {
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+}
+
 img.maps_locator {
-    margin: auto;
-    width: 50%;
-  
+  margin: auto;
+  width: 50%;
+}
+
+a.btn.btn-dark{
+  margin-top: 8% !important;
+  margin-left: 10%;
+ 
+}
+
+* {
+  background-color: #fefae0;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+div.carousel-indicators {
+  background-color: transparent !important;
+}
+span.carousel-control-prev-icon {
+  background-color: transparent !important; 
+}
+
+nav.navbar.navbar-expand-sm.navbar-light.bg-flat.sticky-top {
+  font-size: larger;
+  border-bottom: solid .5px black;
+  margin-bottom: 10px;
 }

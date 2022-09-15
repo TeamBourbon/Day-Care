@@ -23,7 +23,7 @@ export const Navigation = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/servicefinder">Services</Nav.Link>
             <Nav.Link href="/reservations">Reservations</Nav.Link>
-            <Nav.Link to="/logout">logout</Nav.Link>
+            <Nav.Link to="/logout">Logout</Nav.Link>
             {/* <Nav.Link href={`/library/${userId}`}>Library</Nav.Link>
             <Nav.Link to="/login">Login</Nav.Link>
                   <Nav.Link to="/register">Register</Nav.Link>
