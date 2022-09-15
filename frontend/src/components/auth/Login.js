@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import { Button, Container, Form, Grid } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
+import Image from 'react-bootstrap/Image'
 
 export const Login = () => {
 
@@ -37,6 +38,7 @@ export const Login = () => {
   return (
     <>
     <Container>
+        <br></br>
         <h1>Login</h1>
         <br></br>
         <Form onSubmit={loginUser}>

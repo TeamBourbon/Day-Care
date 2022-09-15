@@ -46,20 +46,27 @@ export const Register = () => {
   return (
     <>
     <Container >
+        <br></br>
         <h1>Welcome</h1>
+        <h4>Create an account and we'll take care of your needs</h4>
+        <br></br>
         <Form onSubmit={registerUser}>
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Name<span>*</span></Form.Label>
             <Form.Control type='text' onChange={(e) => setName(e.target.value)}></Form.Control>
-            <Form.Label>Email</Form.Label>
+            <br></br>
+            <Form.Label>Email<span>*</span></Form.Label>
             <Form.Control type='email' onChange={(e) => setEmail(e.target.value)}></Form.Control>
+            <br></br>
             <Form.Label>Phone Number</Form.Label>
             <Form.Control type='number' onChange={(e) => setPhoneNumber(e.target.value)}></Form.Control>
-            <Form.Label>Password</Form.Label>
+            <br></br>
+            <Form.Label>Password<span>*</span></Form.Label>
             <Form.Control type='password' onChange={(e) => setPassword(e.target.value)}></Form.Control>
-            <Form.Label>Repeat Password</Form.Label>
+            <br></br>
+            <Form.Label>Repeat Password<span>*</span></Form.Label>
             <Form.Control type='password' onChange={(e) => setPassword2(e.target.value)}></Form.Control>
             <br></br>
-            <Button type='submit' variant="dark" size="lg">Sign In</Button>
+            <Button type='submit' variant="dark" size="lg">Sign Up</Button>
         </Form>
         <br></br>
         <h4>Already an user? <a href='/login'>Log In</a></h4>
