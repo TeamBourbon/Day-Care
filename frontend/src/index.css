@@ -13,24 +13,24 @@ code {
 }
 
 p.catch_phrase {
-  margin-top: 10%;
+  margin-top: 3% !important;
   margin-left: 10%;
   margin-top: 10%;
-  /* font-family: ; */
-
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
 }
 
 img.carousel_image.img-fluid {
   /* background-color: goldenrod; */
-  margin-bottom: 35px;
-  margin-left: 100px;
+  /* margin-bottom: 35px;
+  margin-left: 100px; */
   border-radius: 20px;
-  padding: 10px;
+  padding: 10px #606C38;
   height: 50%;
   width: 75%;
-  margin: auto;
+  /* margin: auto; */
   text-align: center;
-  border: 10px solid #606C38;
+  border: 10px solid #283618;
 }
 div.active.carousel-item {
   margin-left: 10% !important;
@@ -43,11 +43,14 @@ img.maps_locator {
 }
 
 a.btn.btn-dark{
-  margin-top: 10% !important;
+  margin-top: 8% !important;
+  margin-left: 10%;
+ 
 }
 
 * {
-  background-color: #fefae0
+  background-color: #fefae0;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 div.carousel-indicators {

@@ -11,14 +11,17 @@ export const Home = () => {
         <Container fluid="md" className="home_container">
             <Row fluid>
                 <Col >
-                    <p className="catch_phrase">nurture the future you crave</p>
+                    <p className="catch_phrase">nurture the future you want.</p>
+                    
                 </Col>
-
                 <Col >
-                    <Button variant="dark" sm={3} href="/servicefinder">
+                <Button variant="dark" size="lg" href="/servicefinder">
                         Find Services
                     </Button>
+                    
                 </Col>
+
+                
 
             </Row>
 
@@ -32,6 +35,7 @@ export const Home = () => {
                </Col>
             </Row> */}
         </Container>
+        <Container>
         <Row >
                 <Carousel classname="carousel" fade>
                     <Carousel.Item>
@@ -58,5 +62,7 @@ export const Home = () => {
                     </Carousel.Item>
                 </Carousel>
             </Row>
+            </Container> 
+            
     </>
 }
