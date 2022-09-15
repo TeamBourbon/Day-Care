@@ -7,6 +7,7 @@ import { ServiceFinder } from "./ServiceFinder";
 import { Reservations } from "./Reservations";
 import { VirtualTour } from "./VirtualTour";
 import { LiveFeed } from "./LiveFeed";
+import { Register } from "./auth/Register";
 
 
 export const ApplicationViews = () => {
@@ -33,6 +34,9 @@ export const ApplicationViews = () => {
             </Route>
             <Route exact path="/liveFeed">
                <LiveFeed />
+            </Route>
+            <Route exact path="/register">
+               <Register />
             </Route>
         </>
     )
