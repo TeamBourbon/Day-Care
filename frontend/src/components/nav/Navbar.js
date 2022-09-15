@@ -7,6 +7,12 @@ import { Navbar, Nav, Container } from "react-bootstrap"
 export const Navigation = () => {
   // const history = useHistory()
   // const userId = parseInt(localStorage.getItem("userId"))
+ 
+
+  const logout = () => {
+    localStorage.clear()
+  }
+
   return (
     <div className={"navBar"}>
       <Navbar sticky="top" bg="flat"  expand="sm" collapseOnSelect={"true"}>
@@ -23,7 +29,14 @@ export const Navigation = () => {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/servicefinder">Services</Nav.Link>
             <Nav.Link href="/reservations">Reservations</Nav.Link>
-            <Nav.Link href="/register">Sign In</Nav.Link>
+           {
+             localStorage.getItem('token')
+             ?<Nav.Link onClick={logout} href={'/'}>Log Out</Nav.Link>
+             :<Nav.Link href="/register">Sign In</Nav.Link>
+
+           } 
+            
+            
             {/* <Nav.Link href={`/library/${userId}`}>Library</Nav.Link>
             <Nav.Link to="/login">Login</Nav.Link>
                   <Nav.Link to="/register">Register</Nav.Link>

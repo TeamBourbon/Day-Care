@@ -24,7 +24,9 @@ export const Login = () => {
         const data = await response.json()
 
         if(data.user) {
+            localStorage.setItem('token', data.token)
             window.location.href = '/'
+
         } else {
             alert('Please check you username and password')
         }
